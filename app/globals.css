@@ -8,6 +8,10 @@ button {
   
 }
 
+.cover{
+  object-fit: cover;
+}
+
 
 /* .image1{
   
@@ -15,6 +19,37 @@ button {
 
 
 } */
+
+.coverContainer{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+
+.cover{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.covers{
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 75vh;
+  
+}
+
 
 
 .image2{
