@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
-import {CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN} from "../apiInfo";
+import {CLIENT_ID, ACCESS_TOKEN} from "../apiInfo";
 import ImageSlider from "./components/ImageSlider";
 const handleClick = async () => {
   const response = await fetch(
@@ -29,11 +29,6 @@ export default async function Landing() {
   const games = await handleClick();
   
   slides.push(games.map(printGame))
-  
-
-  
-  
-
 
   return (
     
