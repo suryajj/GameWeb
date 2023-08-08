@@ -3,15 +3,28 @@
 import {useState} from "react";
 
 export default function ImageSlider({slides}: any){
-    console.log(slides[0])
-    const [currentIndex, setCurrentIndex] = useState(1)
-    const slideStyles = {
-        backgroundImage: `url(${slides[0][currentIndex].url})`,
-      };
+    
+    const [currentIndex, setCurrentIndex] = useState(0)
+   
+    
+    const src = slides[currentIndex].url;
+
+    const changeSlides = () => {
+        if(currentIndex == slides.length-1){
+            setCurrentIndex(0)
+        }
+        else{
+            setCurrentIndex(currentIndex+1)
+        }
+        
+    }
+
+
     return (
         
         <div className="coverContainer">
-            <div className="cover" style={slideStyles}></div>
+            <img className="cover" src={src}/>
+            <button onClick={changeSlides}>Switch</button>
         </div>
     )
 }
