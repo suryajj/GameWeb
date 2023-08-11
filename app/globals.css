@@ -3,14 +3,41 @@
 @tailwind utilities;
 
 button {
-  background: none;
-  border: none;
-  
+  /* background-color: #4CAF50; */
+  /* border: 2px solid black; */
+  /* color: white; */
+  /* padding: 15px 32px; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  /* font-size: 16px; */
+}
+
+.arrows{
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(180, 217, 231);
+  font-size: 50px;
+  color: rgb(173, 65, 173);
+}
+
+.prevArrow{
+  margin-right: 35px;
+}
+
+.nextArrow{
+  margin-left: 35px;
 }
 
 .coverContainer{
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -22,6 +49,7 @@ button {
   height: 100%;
   width: 100%;
   border-radius: 25px;
+  border: 5px solid rgb(164, 164, 236);
   
 }
 
@@ -32,16 +60,13 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 540px;
-  width: 405px;
+  height: 720px;
+  width: 540px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5em;
+  margin-top: 25px;
   
 }
-
-
-
 
 .navBar{
   display: flex;
