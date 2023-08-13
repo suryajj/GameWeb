@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function NavBar(){
     return (
         <div className="navBar inner">
-            <button id="homePage" className="navBarOptions navBarOptionsL"><Link href="/">Home</Link></button>
+            <Link href="/" className="navBarOptions navBarOptionsL">Home</Link>
             <button className="navBarOptions navBarOptionsL" id="categories">Genre</button>
-            <button className="navBarOptions navBarOptionsL" id="deals"><Link href="/catalog">Catalog</Link></button>
-            <button className="navBarOptions navBarOptionsL" id="newItems"><Link href="/guess-the-game">Guess the game</Link></button>
-            <input type="text" className="navBarOptions navBarOptionsL searchItems" placeholder="Search for items"/>
-            <button className="navBarOptions navBarOptionsR" id="account"><Link href="/account">Account</Link></button>
+            <Link href="/catalog" className="navBarOptions navBarOptionsL" id="deals">Catalog</Link>
+            <Link href="/guess-the-game" className="navBarOptions navBarOptionsL" id="newItems">Guess the game</Link>
+            <input type="text" className="navBarOptions navBarOptionsL searchItems" placeholder="Search for items..."/>
+            <Link href="/account" className="navBarOptions navBarOptionsR" id="account">Account</Link>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 'use client'
-
+import {FaAngleLeft, FaAngleRight} from 'react-icons/fa';
 import {useState} from "react";
 
 export default function ImageSlider({slides}: any){
@@ -20,9 +20,9 @@ export default function ImageSlider({slides}: any){
 
     const prevSlide = () => {
         console.log(currentIndex, "current")
-        let length = slides.length;
+        let length = slides.length-1;
         if(currentIndex == 0){
-            setCurrentIndex(length-1)
+            setCurrentIndex(length)
         }
         else{
             setCurrentIndex(currentIndex-1)
@@ -33,9 +33,9 @@ export default function ImageSlider({slides}: any){
     return (
         
         <div className="coverContainer">
-            <button onClick={prevSlide} className="arrows prevArrow">&larr;</button>
+            <button onClick={prevSlide} className="arrows prevArrow"><FaAngleLeft/></button>
             <img className="cover" src={src}/>
-            <button onClick={nextSlide} className="arrows nextArrow">&rarr;</button>
+            <button onClick={nextSlide} className="arrows nextArrow"><FaAngleRight/></button>
         </div>
     )
 }

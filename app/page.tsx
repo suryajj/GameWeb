@@ -40,8 +40,14 @@ export default async function Landing() {
   }
 
   return (
+    <div className="home">
+      <div className="top15">
+        Top 15
+      </div>
       <div className="covers">
+       
         <ImageSlider slides={slides}/>
       </div>
+    </div>
   )
 }
