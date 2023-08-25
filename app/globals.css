@@ -93,7 +93,44 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  /* width: 100%; */
   flex: 1;
+}
+
+
+.dropdown{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  
+}
+
+.dropdown-content{
+  @apply border-2 border-t-0 border-blue-300 rounded-b-2xl;
+  display: none;
+  position: absolute;
+  min-width: 100%;
+  overflow: auto;
+  top: 55px;
+  
+  
+}
+
+
+.dropdown-content a{
+  @apply border-2 hover:bg-gray-300 border-blue-300 text-pink-200 italic font-medium pl-1 pt-1;
+  background-color: #6e45e1;
+  border-width: .5px;
+  height: 35px;
+  
+  display: block;
+  
+}
+
+.show{
+  display: block;
 }
 
 #account{
@@ -114,7 +151,7 @@ body{
 
 
 .top15{
-  @apply w-96 h-auto flex pt-2 ml-2;
+  @apply h-auto flex pt-2 ml-2;
   padding-left: 3px;
   width: 370px;
 
@@ -152,10 +189,7 @@ body{
   
 }
 
-::placeholder{
-  color: black;
-  opacity: 1;
-}
+
 
 
 
@@ -170,12 +204,60 @@ input::placeholder{
 }
 
 
+
+
 .home{
   @apply flex flex-row mt-4 mb-4;
   
 }
 
+.chosenGame{
+
+  min-height: 100%;
+}
+
+.genreGameTitle{
+  max-width: 260px;
+  
+}
+
+.genreGame{
+  max-width: 260px;
+  @apply my-4 ml-3 border-2 border-blue-200 rounded-lg;
+}
+
+.genreGame:hover{
+    cursor: pointer;
+}
 
 
 
 
+.genreGamePicture{
+  @apply rounded-md;
+}
+
+.genreGameTitle{
+  
+  @apply text-purple-200 pl-1 h-auto text-lg italic;
+  background-color: rgba(42, 39, 39, 0.25);
+}
+
+.chosenGenreGameTitle{
+  display: flex;
+  @apply justify-center items-center;
+  min-width: 540px;
+}
+
+.chosenGenrePage{
+  display: flex;
+  min-height: 100vh;
+}
+
+.genrePage{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+  min-height: 100vh;
+  /* display: flex; */
+}
