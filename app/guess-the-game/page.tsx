@@ -1,5 +1,5 @@
 import {CLIENT_ID, ACCESS_TOKEN} from "../../apiInfo"
-
+import GuessGame from "../components/GuessGame"
 const getData = async () => {    
     const data = await fetch(
       "https://api.igdb.com/v4/games",
@@ -21,15 +21,16 @@ const getData = async () => {
 
 export default async function GuessTheGame(){
 
-    let data = await getData();
+    let data1 = await getData();
+    
 
-    const printName = (game: any) => {
-            return <div>{game.name}</div>
-    }
+
+
+
 
     return (
         <div>
-            {data.map(printName)}
+            <GuessGame data={data1}/>
         </div>
     )
 }

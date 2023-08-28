@@ -27,15 +27,18 @@ export default function Genres({data}: any){
         let str = parentDiv.outerHTML;
         let ele = document.querySelector(".genrePage")
         
+        let tempDiv = document.createElement("div");
+        tempDiv.classList.add("genrePage", "w-full", "flex")
         
-
+        
         let container = "<div class=\"chosenGenrePage w-full flex\"><div class=\"chosenGame w-full flex justify-center items-center\">" + str + "</div></div>"
 
         if(ele === null){
             return;
         }
 
-        ele.outerHTML = container;
+        ele.outerHTML = container; 
+        
 
     }
     
