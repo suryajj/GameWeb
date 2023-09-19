@@ -1,1 +1,1 @@
-##GameDB + Minigame!
+#GameDB + Minigame!
