@@ -10,7 +10,7 @@ const getData = async () => {
         'Client-ID': CLIENT_ID,
         'Authorization': 'Bearer ' + ACCESS_TOKEN,
       },
-      body: "fields genres.name,platforms.name,name,aggregated_rating,screenshots.image_id,summary,rating,first_release_date,aggregated_rating_count,rating_count,cover.image_id,version_parent,involved_companies.company.*; where rating > 90 & rating_count > 50 & aggregated_rating > 4 & version_parent=null; sort rating desc; limit 15;"
+      body: "fields genres.name,platforms.name,name,aggregated_rating,screenshots.image_id,summary,rating,first_release_date,aggregated_rating_count,rating_count,cover.image_id,version_parent,involved_companies.company.name; where rating > 90 & rating_count > 50 & aggregated_rating > 4 & version_parent=null; sort rating desc; limit 15;"
   })
     
 

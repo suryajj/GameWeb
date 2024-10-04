@@ -1,11 +1,7 @@
 export default function Stats({game} : any) {
     
     
-    
-    const returnGenres = (genre: any, i: any) => {
-        
-        return ((i !== game.genres.length-1) ? <div>{genre.name},&nbsp;</div> : <div>{genre.name}</div>)
-    }
+
 
     const src = (image_id: any) => {
         return `https://images.igdb.com/igdb/image/upload/t_screenshot_big/${image_id}.png`

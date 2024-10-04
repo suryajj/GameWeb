@@ -10,7 +10,7 @@ async function getData(){
               'Client-ID': CLIENT_ID,
               'Authorization': 'Bearer ' + ACCESS_TOKEN,
             },
-            body: "fields name,genres,rating_count,rating,cover.image_id; where genres = (10) & rating_count > 50; sort rating desc; limit 20;" 
+            body: "fields name,screenshots.image_id,genres.name,rating_count,rating,cover.image_id,platforms.name,summary,first_release_date; where genres = (10) & rating_count > 50; sort rating desc; limit 20;" 
         })
           
       
@@ -33,6 +33,7 @@ export default async function Racing(){
 
     
     const data1 = await getData();
+    
 
     return (
         <Genres data={data1}/>

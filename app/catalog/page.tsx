@@ -1,7 +1,7 @@
+import GamesCatalog from '../components/GamesCatalog'
+
 export default function Catalog() {
     return (
-      <div>
-        <div>Catalog page</div>
-      </div>
+      <GamesCatalog/>
     )
   }

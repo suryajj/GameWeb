@@ -1,5 +1,7 @@
+import LoginBox from "../components/LoginBox"
+
 export default function Account(){
     return (
-        <div>Account</div>
+        <LoginBox/>
     )
 }

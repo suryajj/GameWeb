@@ -10,7 +10,7 @@ async function ADV(){
               'Client-ID': CLIENT_ID,
               'Authorization': 'Bearer ' + ACCESS_TOKEN,
             },
-            body: "fields name,genres,rating_count,rating,cover.image_id; where genres = (31) & rating_count > 50; sort rating desc; limit 20;" 
+            body: "fields name,screenshots.image_id,genres.name,rating_count,rating,cover.image_id,platforms.name,summary,first_release_date; where genres = (31) & rating_count > 50; sort rating desc; limit 20;" 
         })
           
       

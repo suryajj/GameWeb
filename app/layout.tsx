@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
+      <title>GameDB</title>
       <body className={inter.className}>
         <NavBar/>
         {children}

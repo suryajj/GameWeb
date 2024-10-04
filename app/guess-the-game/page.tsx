@@ -9,7 +9,7 @@ const getData = async () => {
           'Client-ID': CLIENT_ID,
           'Authorization': 'Bearer ' + ACCESS_TOKEN,
         },
-        body: "fields name,cover.*; where rating > 85 & rating_count > 50 & aggregated_rating > 4 & version_parent=null; limit 500;"
+        body: "fields name,cover.image_id,involved_companies.company.name,genres.name; where rating > 85 & rating_count > 50 & aggregated_rating > 4 & version_parent=null; limit 500;"
     })
       
   

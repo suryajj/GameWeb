@@ -1,11 +1,55 @@
 
 "use client"
 
-
+import Stats from "./Stats"
+import ReactDOM from 'react-dom'; 
+import {ImStarEmpty, ImStarFull} from "react-icons/im";
+import {useState} from "react";
 
 
 export default function Genres({data}: any){
     
+
+
+    const addToFav = async (game:any) => {
+
+
+        
+        const jwt_token = localStorage.getItem('jwt_token');
+
+        try{
+            const data = await fetch("http://localhost:4000/fav", 
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization' : `Bearer ${jwt_token}`,
+                    
+                },
+                body: JSON.stringify(game)
+                
+            
+            })
+
+            const response = await data.json();
+            
+            
+            setGames(response)
+            
+            return response[0].username;
+    
+        }
+        catch{
+
+        }
+
+    }
+
+
+    const setGames = (game:any) => {
+        console.log(game, "gamesFetchedIntoGenres")
+    }
+
     const handleClick = (e: any) => {
         
         let parentDiv = e.currentTarget;
@@ -20,24 +64,27 @@ export default function Genres({data}: any){
         image.outerHTML = `<img src=${imageSrc} class=\"genreGamePicture\"/>`
 
         let name = parentDiv.querySelector(".genreGameTitle")
-        name.outerHTML = `<div class=\"chosenGenreGameTitle\">${data[parseInt(parentDiv.id)].name}</div>`
+        name.outerHTML = ""
 
 
 
-        let str = parentDiv.outerHTML;
+        
         let ele = document.querySelector(".genrePage")
         
-        let tempDiv = document.createElement("div");
-        tempDiv.classList.add("genrePage", "w-full", "flex")
-        
-        
-        let container = "<div class=\"chosenGenrePage w-full flex\"><div class=\"chosenGame w-full flex justify-center items-center\">" + str + "</div></div>"
-
         if(ele === null){
             return;
         }
 
-        ele.outerHTML = container; 
+        ele.innerHTML = ""; 
+        ele.classList.toggle("toggleDisplay")
+        
+        ele.appendChild(parentDiv)
+
+        let container = document.createElement('div');
+
+        ReactDOM.render(<Stats game={data[parentDiv.id]}/>, container)
+
+        ele.appendChild(container)
         
 
     }
@@ -48,19 +95,26 @@ export default function Genres({data}: any){
         
       
           return (
-              
-                <div onClick={handleClick} id={i + " genreImage"}className="genreGame min-w-max min-h-max">
+              <div className="genreGame min-w-max min-h-max">
+                <div onClick={handleClick} id={i}>
                     <img src={src} className="genreGamePicture"/>
-                    <div className="genreGameTitle">{game.name}</div>
+                    <div className="genreGameTitle h-16 pr-2">{game.name}</div>
                 </div>
-              
+                <button onClick={() => {addToFav(game)}} className="startButton w-full pb-2"><ImStarEmpty/></button>
+            </div>
                 
           )
 
     }
 
 
+
+    console.log(data, "genresData")
+
     return (
+
+        
+
         <div className="genrePage w-full flex">
           
             

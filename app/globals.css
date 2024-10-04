@@ -77,7 +77,83 @@ body{
   
 }
 
+.outerLoginBox{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 70vh;
+  align-items: center;
+  
+  margin: auto;
+  margin-top: 75px;
+  border: 2px solid rgb(86, 48, 116);
+  border-radius: 15px;
 
+
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.usernameDiv, .passwordDiv{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.usernameTitle, .passwordTitle{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 35px;
+}
+
+.usernameEntry, .passwordEntry{
+  
+  width: 65%;
+  height: 35px;
+  border-radius: 15px;
+  padding: 7px;
+  margin-right: 35px;
+}
+
+.usernameEntry::placeholder, .passwordEntry::placeholder{
+  color: rgba(177, 177, 177, 0.75);
+  font-style: italic;
+}
+
+.loginTitle{
+  margin-top: 45px;
+  font-size: 24px;
+  padding: 5px;
+  padding-right: 125px;
+  padding-left: 125px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.submitButton{
+
+  width: 25%;
+  height: 15%;
+  font-size: 20px;
+  @apply border-black rounded-2xl;
+  border: 1px solid black;
+  background-color: rgba(243, 234, 247, 0.5);
+}
+
+.submitButton:hover{
+  background-color: rgba(201, 201, 213, 0.5);
+}
 
 .navBar{
   display: flex;
@@ -239,7 +315,13 @@ input::placeholder{
 
 .genreGameTitle{
   
-  @apply text-purple-200 pl-1 h-auto text-lg italic;
+  @apply text-purple-200 pl-1 text-lg italic;
+  background-color: rgba(42, 39, 39, 0.25);
+}
+
+.startButton{
+  
+  @apply text-purple-200 pl-1 text-lg italic;
   background-color: rgba(42, 39, 39, 0.25);
 }
 
@@ -260,4 +342,147 @@ input::placeholder{
   
   min-height: 100vh;
   /* display: flex; */
+}
+
+.toggleDisplay{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+
+
+.guessGameContainer {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Guess Game Title */
+.guessGameTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  @apply text-blue-300
+}
+
+
+/* Guess Game Tries */
+.guessGameTries {
+  @apply text-blue-300 border-2 p-2 border-pink-200 rounded-3xl;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Guess Game Guess */
+.guessGameGuess {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Guess Game Keyboard */
+.guessGameKeyboard {
+  display: inline-block;
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Guess Game Keys */
+.guessGameKey {
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.guessGameKey:hover {
+  background-color: #e0e0e0;
+}
+
+/* Guess Game Hints */
+.guessGameHints {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* Guess Game Companies */
+.guessGameCompaniesButton {
+  font-weight: bold;
+  cursor: pointer;
+}
+.guessGameCompaniesName {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.guessGameGenre {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Guess Game Result */
+.displayResult {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.guessGame{
+  margin: 25px;
+  margin-top: 10vh;
+  padding: 10px;
+  @apply flex flex-col items-center border-2 border-pink-200 rounded-3xl;
+  justify-content: center;
+
+}
+
+.guessChar{
+    padding: 4px;
+}
+
+.loggedinBox{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+}
+
+.loggedinInfo{
+
+  font-size: 30px;
+
+}
+
+.logoutButton{
+
+  height: 15%;
+  font-size: 20px;
+  @apply border-black rounded-2xl;
+  border: 1px solid black;
+  background-color: rgba(243, 234, 247, 0.5);
+}
+
+.logoutButton:hover{
+  background-color: rgba(201, 201, 213, 0.5);
+}
+
+
+.registerButton{
+  position: fixed;
+  top: 12%;
+  right: 3%;
+  border: 1px solid black;
+  padding: 4px;
+  height: 5vh;
+  width: 5%;
+  background-color: rgba(243, 234, 247, 0.5);
+  @apply rounded-2xl;
+}
+
+.registerButton:hover{
+  background-color: rgba(201, 201, 213, 0.5);
 }

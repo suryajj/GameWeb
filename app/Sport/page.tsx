@@ -10,15 +10,16 @@ async function getData(){
               'Client-ID': CLIENT_ID,
               'Authorization': 'Bearer ' + ACCESS_TOKEN,
             },
-            body: "fields name,genres,rating_count,rating,cover.image_id; where genres = (14) & rating_count > 50; sort rating desc; limit 20;" 
+            body: "fields name,screenshots.image_id,genres.name,rating_count,rating,cover.image_id,platforms.name,summary,first_release_date; where genres = (12) & rating_count > 50; sort rating desc; limit 20;" 
         })
-          
+          //genre is 14 for sports 12 for now bc not working
       
             
         return data.json()
       
       
 }
+
 
 
 
