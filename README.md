@@ -1,4 +1,4 @@
-# GameDB + Minigame!
+# Gametopia!
 
 ## This is a project that I created as a fun way for my friends and I to discover, browse and catalog highly-rated, popular games.
 
