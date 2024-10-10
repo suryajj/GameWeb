@@ -2,7 +2,7 @@
 
 ## This is a project that I created as a fun way for my friends and I to discover, browse and catalog highly-rated, popular games.
 
-### Through using tools such as the IGDB REST API (with OAuth authorization code flow), ReactJS, NextJS, Typescript, HTML, Tailwind CSS and Visual Studio Code. I was able to create and run a local host with multiple pages, with the help of NextJS server-side rendering properties and ReactJS Hooks. 
+### Through using tools such as the IGDB REST API (with OAuth authorization code flow), ReactJS, NextJS, Typescript, Express.js, Node.js, PostgreSQL, HTML, Tailwind CSS and Visual Studio Code. I was able to create and run a local host with multiple pages, with the help of NextJS server-side rendering properties and ReactJS Hooks. Futhermore, I was able to create a cataloging page for the user's favourite games using Express.js API routes and PostgreSQL databases.
 
 ### Here is the description:
 
@@ -34,7 +34,17 @@ Once one of the games is clicked on, it takes you to a new page with just the se
 
 ----------------------------------------
 
-### Page 3: Guess the game
+### Page 3: Favourite Games
+
+This page is the place for users to store their favourite games. It involves a list of the user's selected/favourited games on display. 
+
+This is achieved through the use of JWTs and Express.js backend API routes. 
+
+Furthermore, the games are stored in the PostgreSQL database where a many-to-many relationship is used.
+
+----------------------------------------
+
+### Page 4: Guess the game
 
 This page includes a mini-game to test the knowledge of users on existing video games. Consisting of an interactive keyboard, guess panel, # of tries and hint buttons in case the user struggles.
 
@@ -43,6 +53,18 @@ The game follows the vibe of a hangman-esque web game but with users guessing ra
 The games are chosen at random and the users will have 5 tries to attempt for an accurate guess. When this happens the game is then revealed to the user.
 
 If the user struggles to guess the game, they are able to click one of the two hints, that reveal either the companies the game is made by, or the genre that the game exists in. This way, the users are able to increase their knowledge of games. 
+
+----------------------------------------
+
+### Page 5: Account (Log in/Log out)
+
+This page is used to log in and authenticate the user using JWTs.
+
+There is an option to register for new users to create a new account. Passwords are encrypted.
+
+If the user is logged in, this will display an option to log out.
+
+This account is for the user to be able to store and view their favourite games.
 
 ----------------------------------------
 
